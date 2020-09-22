@@ -1,0 +1,39 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+}
+
+#top_panel {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 100px;
+	right: 0;
+	background: grey;
+}
+
+#bottom_panel {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	height: 200px;
+	color: #fff;
+	background: black;
+}
+
+#drag_handle {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -2px;
+	height: 16px;
+	cursor: n-resize;
+}
