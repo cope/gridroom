@@ -1,0 +1,23 @@
+{
+	"name": "gridroom",
+	"version": "0.0.1",
+	"description": "playroom for css grid",
+	"main": "index.js",
+	"repository": "https://github.com/cope/gridroom.git/gridroom",
+	"license": "UNLICENSED",
+	"authors": {
+		"name": "Predrag Stojadinovic",
+		"email": "predrag@stojadinovic.net"
+	},
+	"scripts": {
+		"dev": "vuepress dev src",
+		"build": "vuepress build src"
+	},
+	"dependencies": {
+		"css-validator": "^0.9.0",
+		"html-validator": "^5.1.16"
+	},
+	"devDependencies": {
+		"vuepress": "^1.5.3"
+	}
+}
