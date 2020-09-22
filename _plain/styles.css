@@ -33,7 +33,7 @@ body, html {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: -2px;
+	top: -8px;
 	height: 16px;
 	cursor: n-resize;
 }
