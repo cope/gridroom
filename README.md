@@ -1,2 +1,2 @@
 # gridroom
-like playroom, but for css grids
+like [playroom](https://github.com/seek-oss/playroom), but for css grids
