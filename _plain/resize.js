@@ -1,33 +1,24 @@
-var isResizing = false;
-var lastDownY = 0;
+let isResizing = false;
+let lastDownY = 0;
 
-var container = document.getElementById('container');
-var topPanel = document.getElementById('top_panel');
-var bottomPanel = document.getElementById('bottom_panel');
-var dragHandle = document.getElementById('drag_handle');
+const container = document.getElementById('container');
+const topPanel = document.getElementById('top_panel');
+const bottomPanel = document.getElementById('bottom_panel');
 
-// function resizer() {
-dragHandle
-	.addEventListener('mousedown', function (e) {
-		isResizing = true;
-		lastDownY = e.clientY;
-	});
+const dragHandle = document.getElementById('drag_handle');
+dragHandle.addEventListener('mousedown', (e) => {
+	isResizing = true;
+	lastDownY = e.clientY;
+});
 
-window
-	.addEventListener('mousemove', function (e) {
-		if (!isResizing) return;
+window.addEventListener('mousemove', (e) => {
+	if (!isResizing) return;
 
-		var offsetBottom = container.clientHeight - (e.clientY - container.offsetTop);
-		if (offsetBottom < 50) offsetBottom = 50;
+	let offsetBottom = container.clientHeight - (e.clientY - container.offsetTop);
+	offsetBottom = offsetBottom < 50 ? 50 : offsetBottom;
 
-		topPanel.style.bottom = offsetBottom + 'px';
-		bottomPanel.style.height = offsetBottom + 'px';
-	});
+	topPanel.style.bottom = offsetBottom + 'px';
+	bottomPanel.style.height = offsetBottom + 'px';
+});
 
-window
-	.addEventListener('mouseup', function (e) {
-		// stop resizing
-		isResizing = false;
-	});
-// }
-// resizer();
+window.addEventListener('mouseup', (e) => isResizing = false);
